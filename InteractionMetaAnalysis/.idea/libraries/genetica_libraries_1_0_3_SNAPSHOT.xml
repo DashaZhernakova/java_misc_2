@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="genetica-libraries-1.0.3-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../systemsgenetics/genetica-libraries/target/genetica-libraries-1.0.3-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
