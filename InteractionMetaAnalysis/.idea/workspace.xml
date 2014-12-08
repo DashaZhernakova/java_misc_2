@@ -101,10 +101,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MetaAnalyser.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MetaAnalyser.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MetaAnalyser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3285">
+            <state line="203" column="95" selection-start="6804" selection-end="6804" vertical-scroll-proportion="3.6100628" vertical-offset="1323" max-vertical-offset="3360">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -123,10 +123,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InteractionTriplet.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="InteractionTriplet.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/InteractionTriplet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="57" selection-start="1818" selection-end="1818" vertical-scroll-proportion="1.3367347" vertical-offset="440" max-vertical-offset="1965">
+            <state line="74" column="57" selection-start="1818" selection-end="1818" vertical-scroll-proportion="0.0" vertical-offset="440" max-vertical-offset="1965">
               <folding />
             </state>
           </provider>
@@ -143,9 +143,9 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/InteractionResultsReader.java" />
-        <option value="$PROJECT_DIR$/src/MetaAnalyser.java" />
         <option value="$PROJECT_DIR$/src/MetaAnalyser_synch.java" />
         <option value="$PROJECT_DIR$/src/InteractionTriplet.java" />
+        <option value="$PROJECT_DIR$/src/MetaAnalyser.java" />
       </list>
     </option>
   </component>
@@ -389,12 +389,12 @@
       <workItem from="1415176576142" duration="595000" />
       <workItem from="1416488807545" duration="11490000" />
       <workItem from="1417597024496" duration="850000" />
-      <workItem from="1417621000833" duration="16229000" />
+      <workItem from="1417621000833" duration="16710000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50982000" />
+    <option name="totallyTimeSpent" value="51463000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1672" height="931" extended-state="0" />
@@ -489,15 +489,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MetaAnalyser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3285">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../../../systemsgenetics/genetica-libraries/target/genetica-libraries-1.0.3-SNAPSHOT.jar!/umcg/genetica/io/text/TextFile.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="85" column="28" selection-start="4495" selection-end="4495" vertical-scroll-proportion="-6.36" vertical-offset="1101" max-vertical-offset="2025">
@@ -516,8 +507,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/InteractionTriplet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="57" selection-start="1818" selection-end="1818" vertical-scroll-proportion="1.3367347" vertical-offset="440" max-vertical-offset="1965">
+        <state line="74" column="57" selection-start="1818" selection-end="1818" vertical-scroll-proportion="0.0" vertical-offset="440" max-vertical-offset="1965">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MetaAnalyser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="203" column="95" selection-start="6804" selection-end="6804" vertical-scroll-proportion="3.6100628" vertical-offset="1323" max-vertical-offset="3360">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -199,11 +199,16 @@ public class MetaAnalyser {
 		System.out.println("Finished");
 	}
 
+	/**
+	 *
+	 * @param args - paths to InteractionResults.txt files, followed by the path to output file
+	 * @throws IOException
+	 */
 	public static void main(String[] args) throws IOException {
 
 		//String[] args = new String[]{"/Users/dashazhernakova/Documents/UMCG/data/BBMRI/interactionWithTFs/szymon+maarten+sasha_TFs/LL/InteractionResults.txt.gz", "/Users/dashazhernakova/Documents/UMCG/data/BBMRI/interactionWithTFs/szymon+maarten+sasha_TFs/LLS/InteractionResults.txt.gz", "/Users/dashazhernakova/Documents/UMCG/data/BBMRI/interactionWithTFs/szymon+maarten+sasha_TFs/RS/InteractionResults.txt.gz", "/Users/dashazhernakova/Documents/UMCG/data/BBMRI/interactionWithTFs/szymon+maarten+sasha_TFs/CODAM/InteractionResults.txt.gz", "/Users/dashazhernakova/Documents/UMCG/data/BBMRI/interactionWithTFs/szymon+maarten+sasha_TFs/meta_tmp.txt"};
 		MetaAnalyser meta = new MetaAnalyser(args.length - 1);
-		//meta.numCohorts = args.length - 1;
+
 		for (int i = 0; i < args.length - 1; i++){
 			meta.loadData(args[i], args[i].replace("InteractionResults","SNPSummaryStatistics"), i);
 		}
