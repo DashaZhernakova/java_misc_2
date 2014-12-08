@@ -4,7 +4,7 @@ import java.util.Arrays;
 /**
  * Created by dashazhernakova on 07.10.14.
  */
-public class InteractionTriplet {
+public class InteractionTriplet implements Comparable<InteractionTriplet> {
 	String id;
 	String covariate;
 	String snp;
@@ -21,6 +21,7 @@ public class InteractionTriplet {
 	char[] alleles;
 	char alleleAssessed;
 
+	public int cohortIndex;
 
 	public InteractionTriplet(String line){
 		String[] els = line.split("\t");
@@ -37,6 +38,26 @@ public class InteractionTriplet {
 
 		numSamples = Integer.parseInt(els[8]);
 	}
+
+	public InteractionTriplet(String line, int cnt){
+		cohortIndex = cnt;
+
+		String[] els = line.split("\t");
+		snp = els[0];
+		gene = els[1];
+		covariate = els[2];
+		id = snp + "_" + gene + "_" + covariate;
+
+		snpZ = Float.parseFloat(els[3]);
+		covariateZ = Float.parseFloat(els[4]);
+		interactionZ = Float.parseFloat(els[5]);
+		mainZ = Float.parseFloat(els[6]);
+		//interactionZflipped = Float.parseFloat(els[7]); // remove for the old version of Interaction Analysis
+
+		//numSamples = Integer.parseInt(els[8]);
+		numSamples = Integer.parseInt(els[7]);
+	}
+
 	public void readSNPInfo(String line){
 		String[] els = line.split("\t");
 		/*
@@ -50,6 +71,13 @@ public class InteractionTriplet {
 		Arrays.sort(alleles);
 		alleleAssessed = els[4].charAt(0);
 	}
+
+	// for the paralel reading of the interaction results
+	/*public void readSNPInfo(char[] inAlleles){
+		alleles = new char[] {inAlleles[cohortIndex*3], inAlleles[cohortIndex*3 + 1]};
+		Arrays.sort(alleles);
+		alleleAssessed = inAlleles[cohortIndex*3 + 2];
+	}*/
 
 	public void readSNPInfo(char[] inAlleles){
 		alleles = new char[] {inAlleles[0], inAlleles[1]};
@@ -91,4 +119,8 @@ public class InteractionTriplet {
 			return - mainZ;
 		return snpZ;
 	}*/
+
+	public int compareTo(InteractionTriplet anotherTriplet) {
+		return id.compareTo(anotherTriplet.id);
+	}
 }
