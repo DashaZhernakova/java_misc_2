@@ -30,42 +30,81 @@ public class MetaAnalyser_synch {
 		}
 		return files;
 	}
-	private void readInteractionResults(String[] fnames) throws IOException {
+
+	private boolean checkAllFilesFinished(boolean[] filesFinished){
+		for (boolean fileFinished : filesFinished){
+			if (fileFinished == false)
+				return false;
+		}
+		return true;
+	}
+
+	private void closeFiles(TextFile[] files) throws IOException {
+		for (TextFile f : files)
+			f.close();
+	}
+
+	private void readInteractionResults(String[] fnames, TextFile out) throws IOException {
 		TextFile[] files = initFiles(fnames);
 		InteractionTriplet[] curTriplets = new InteractionTriplet[numCohorts];
 		String line = "";
 		String curSnp = "";
 		char[] curAlleles = null;
-
+		boolean[] filesFinished = new boolean[numCohorts];
+		int cnt = 1;
+		long duration4 = 0;
 		//read first lines of each cohort's file
 		for (int i = 0; i < numCohorts; i++){
 			TextFile f = files[i];
-			f.readLine();
+			//f.readLine();
+			//String l = f.readLine();
+
 			curTriplets[i] = initTriplet(f.readLine(), i);
 		}
-
-
+		long start = System.nanoTime();
+		long end = 0;
 		while (true){
 			// Choose those triplets that have the same id and that are lexicographically first
+
 			ArrayList<Integer> upperLevelOriginalIndices = chooseUpperIndices(curTriplets);
+
 			InteractionTriplet[] upperTriplets = getArrayElementsByIndices(curTriplets, upperLevelOriginalIndices);
+
 			//run meta-analysis on them
 			String outString = calculateWeightedZscore(upperTriplets);
-			System.out.println(outString);
 
-			// For those cohorts that were used in meta-analsyis read next results line
-			for (int idx : upperLevelOriginalIndices){
-				TextFile f = files[idx];
-				if ((line = f.readLine()) != null)
-					curTriplets[idx] = initTriplet(line, idx);
+			out.writeln(outString);
+			//System.out.println(outString);
+		if (cnt % 10000000 == 0){
+			end = System.nanoTime();
+			System.out.println("Processed " + cnt + " triplets in " + (end - start)/ 1000000000 + " seconds");
+			start = System.nanoTime();
+		}
+		cnt++;
+
+		// For those cohorts that were used in meta-analsyis read next results line
+		for (int idx : upperLevelOriginalIndices){
+			TextFile f = files[idx];
+			if ((line = f.readLine()) != null){
+				curTriplets[idx] = initTriplet(line, idx);
+			}
+			else{
+				filesFinished[idx] = true;
+				//if this was the last open file, stop the work, clean the files
+				if (checkAllFilesFinished(filesFinished)){
+					closeFiles(files);
+					return;
+				}
 			}
 		}
 	}
 
+}
+
 	private InteractionTriplet initTriplet(String line, int i){
 		String snp = line.split("\t")[0];
 		InteractionTriplet triplet = new InteractionTriplet(line, i);
-		triplet.readSNPInfo(SNPalleles.get(snp));
+		triplet.readSNPInfoParallel(SNPalleles.get(snp));
 		return triplet;
 	}
 
@@ -158,8 +197,9 @@ public class MetaAnalyser_synch {
 	private String calculateWeightedZscore(InteractionTriplet[] triplets){
 		char[] alleles = new char[2];
 		char alleleAssesed = 0;
-		float interactionZscore = 0, mainZscore = 0, snpZscore = 0, denominator = 0, interactionZscoreFlipped = 0;
+		float interactionZscore = 0, mainZscore = 0, snpZscore = 0, covariateZscore = 0, denominator = 0, interactionZscoreFlipped = 0;
 		String outputStr = "";
+		int cnt = 0;
 
 		// assign base alleles as the alleles of the first triplet, write triplet info
 		for (int i = 0; i < triplets.length; i++){
@@ -182,7 +222,7 @@ public class MetaAnalyser_synch {
 			InteractionTriplet triplet = triplets[i];
 
 			if (triplet == null){
-				outputStr += "\tNA\tNA\tNA\tNA";
+				outputStr += "\tNA\tNA\tNA\tNA\tNA\tNA"; //if there are no interaction results for the triplet in the cohort
 				continue;
 			}
 
@@ -199,23 +239,26 @@ public class MetaAnalyser_synch {
 
 
 				//not reverting of the z-scores
-				interactionZscore += triplet.interactionZ * triplet.numSamples;
-				interactionZscoreFlipped += triplet.interactionZflipped * triplet.numSamples;
+				int numSamples = triplet.numSamples;
 
-				snpZscore += triplet.snpZ * triplet.numSamples;
+				interactionZscore += triplet.interactionZ * numSamples;
+				interactionZscoreFlipped += triplet.interactionZflipped * numSamples;
 
-				mainZscore += triplet.mainZ * triplet.numSamples;
+				snpZscore += triplet.snpZ * numSamples;
+				covariateZscore += triplet.covariateZ * numSamples;
 
-				denominator += Math.pow(triplet.numSamples, 2);
-				outputStr += "\t" + triplet.mainZ + "\t" + triplet.interactionZ + "\t" + triplet.snpZ + "\t" + triplet.numSamples;
+				mainZscore += triplet.mainZ * numSamples;
+
+				denominator += Math.pow(numSamples, 2);
+				outputStr += "\t" + triplet.mainZ + "\t" + triplet.interactionZ + "\t" + triplet.interactionZflipped + "\t" + triplet.snpZ + "\t" + triplet.covariateZ + "\t" + numSamples;
 			}
 			else{
-				outputStr +="\tNA\tNA\tNA\tNA";
+				outputStr +="\tNA\tNA\tNA\tNA\tNA\tNA";
 			}
 
 		}
 
-		outputStr += "\t" + mainZscore/Math.sqrt(denominator) + "\t" + interactionZscore/Math.sqrt(denominator) + "\t" + snpZscore/Math.sqrt(denominator) + "\t" + interactionZscoreFlipped/Math.sqrt(denominator);
+		outputStr += "\t" + mainZscore/Math.sqrt(denominator) + "\t" + interactionZscore/Math.sqrt(denominator) + "\t" + interactionZscoreFlipped/Math.sqrt(denominator)+ "\t" + snpZscore/Math.sqrt(denominator) + "\t" + covariateZscore/Math.sqrt(denominator) ;
 		return outputStr;
 	}
 
@@ -225,8 +268,10 @@ public class MetaAnalyser_synch {
 	 * @throws java.io.IOException
 	 */
 	public void runMetaAnalysis(String[] fnames) throws IOException {
-
+		System.out.println("Started");
 		String outFname = fnames[fnames.length - 1];
+		System.out.println("Writing output to " + outFname);
+
 		TextFile out = new TextFile(outFname, true);
 
 		for (int idx = 0; idx < numCohorts; idx++){
@@ -237,23 +282,21 @@ public class MetaAnalyser_synch {
 			cohortNames[idx] = fname_spl[fname_spl.length - 2];
 
 			//read allele info
-			readSNPstats(fname.replace("InteractionResults","SNPSummaryStatistics"), idx);
+			readSNPstats(fname.replace("InteractionResults","SNPSummaryStatistics").replace(".sorted2",""), idx);
 		}
 
 
 		// Write header
-		String header = "SNP\tgene\tTF\talleles\talleleAssesed\t";
+		String header = "SNP\tgene\tTF\talleles\talleleAssesed";
 		for (String cohortName : cohortNames){
-			header += cohortName + "_main_zscore\t" + cohortName + "_interaction_zscore\t" + cohortName + "_snp_zscore\t" + cohortName + "_numSamples";
+			header += "\t" + cohortName + "_main_zscore\t" + cohortName + "_interaction_zscore\t" + cohortName + "_snp_zscore\t" + cohortName + "_numSamples";
 		}
 
 		header += "\tmeta_main_z-score\tmeta_interaction_z-score\tmeta_snp_z-score\tmeta_interaction_z-score_flipped";
 		out.writeln(header);
 
 		// Run meta-analysis
-		readInteractionResults(fnames);
-
-		//TODO: write results
+		readInteractionResults(fnames, out);
 
 		out.close();
 		System.out.println("Finished");
@@ -261,10 +304,10 @@ public class MetaAnalyser_synch {
 
 	public static void main(String[] args) throws IOException {
 
-		args = new String[] {"/Users/dashazhernakova/Documents/UMCG/data/BBMRI/interactionWithTFs/szymon+maarten+sasha_TFs/LL/InteractionResults.txt.gz",
-				"/Users/dashazhernakova/Documents/UMCG/data/BBMRI/interactionWithTFs/szymon+maarten+sasha_TFs/RS/InteractionResults.txt.gz",
-				"/Users/dashazhernakova/Documents/UMCG/data/BBMRI/interactionWithTFs/szymon+maarten+sasha_TFs/LLS/InteractionResults.txt.gz",
+		/*args = new String[] {"/Users/dashazhernakova/Documents/UMCG/data/BBMRI/interactionWithTFs/BBMRI_maarten+sasha_TFs/LL/LL_InteractionResults.sorted.txt.gz",
+				"/Users/dashazhernakova/Documents/UMCG/data/BBMRI/interactionWithTFs/BBMRI_maarten+sasha_TFs/RS/RS_InteractionResults.sorted.txt.gz",
 				"/Users/dashazhernakova/Documents/UMCG/tmp.txt"};
+		*/
 		MetaAnalyser_synch meta = new MetaAnalyser_synch(args.length - 1);
 
 		meta.runMetaAnalysis(args);

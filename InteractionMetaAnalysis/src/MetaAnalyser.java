@@ -53,9 +53,10 @@ public class MetaAnalyser {
 			InteractionTriplet[] resultList = interactionResults.get(triplet.id);
 			if (resultList == null){
 				resultList = new InteractionTriplet[numCohorts];
+				interactionResults.put(triplet.id, resultList);
 			}
 			resultList[cohortIndex] = triplet;
-			interactionResults.put(triplet.id, resultList);
+
 		}
 		System.out.println("Read " + interactionResults.size() + " interaction analysis results from " + fname);
 		tf.close();

@@ -52,10 +52,11 @@ public class InteractionTriplet implements Comparable<InteractionTriplet> {
 		covariateZ = Float.parseFloat(els[4]);
 		interactionZ = Float.parseFloat(els[5]);
 		mainZ = Float.parseFloat(els[6]);
-		//interactionZflipped = Float.parseFloat(els[7]); // remove for the old version of Interaction Analysis
 
-		//numSamples = Integer.parseInt(els[8]);
-		numSamples = Integer.parseInt(els[7]);
+		interactionZflipped = Float.parseFloat(els[7]); // remove for the old version of Interaction Analysis
+		numSamples = Integer.parseInt(els[8]);
+
+		//numSamples = Integer.parseInt(els[7]);
 	}
 
 	public void readSNPInfo(String line){
@@ -73,11 +74,17 @@ public class InteractionTriplet implements Comparable<InteractionTriplet> {
 	}
 
 	// for the paralel reading of the interaction results
-	/*public void readSNPInfo(char[] inAlleles){
+	public void readSNPInfoParallel(char[] inAlleles){
+		try{
 		alleles = new char[] {inAlleles[cohortIndex*3], inAlleles[cohortIndex*3 + 1]};
+		} catch (Exception e){
+			System.out.println(snp + "\t" + gene + "\t" + covariate);
+			System.out.println(inAlleles);
+
+		}
 		Arrays.sort(alleles);
 		alleleAssessed = inAlleles[cohortIndex*3 + 2];
-	}*/
+	}
 
 	public void readSNPInfo(char[] inAlleles){
 		alleles = new char[] {inAlleles[0], inAlleles[1]};
