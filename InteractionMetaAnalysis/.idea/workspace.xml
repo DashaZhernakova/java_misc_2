@@ -60,7 +60,23 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/MetaAnalyser_synch.java" line="89" class="MetaAnalyser_synch" package="">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -70,30 +86,68 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MetaAnalyser.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MetaAnalyser.java">
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="209" column="650" selection-start="6931" selection-end="7542" vertical-scroll-proportion="0.0" vertical-offset="2870" max-vertical-offset="3375">
+            <state line="8" column="35" selection-start="437" selection-end="437" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1485">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MetaAnalyser_synch.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/MetaAnalyser_synch.java">
+      <file leaf-file-name="MetaAnalyser.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/MetaAnalyser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="17" selection-start="1213" selection-end="1213" vertical-scroll-proportion="0.33333334" vertical-offset="298" max-vertical-offset="4710">
+            <state line="207" column="63" selection-start="6842" selection-end="6901" vertical-scroll-proportion="0.0" vertical-offset="2477" max-vertical-offset="3315">
               <folding>
-                <element signature="e#4700#4709#0" expanded="true" />
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="64" column="13" selection-start="1139" selection-end="1467" vertical-scroll-proportion="0.79318446" vertical-offset="255" max-vertical-offset="1110">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CompareBinaryToText.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/CompareBinaryToText.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="87" selection-start="1713" selection-end="1713" vertical-scroll-proportion="0.0" vertical-offset="388" max-vertical-offset="1485">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MetaAnalyser_synch.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/MetaAnalyser_synch.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="56" column="12" selection-start="1613" selection-end="1613" vertical-scroll-proportion="0.0" vertical-offset="840" max-vertical-offset="4770">
+              <folding>
+                <element signature="e#4667#4676#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="InteractionTriplet.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/InteractionTriplet.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/InteractionTriplet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="8" selection-start="1264" selection-end="1264" vertical-scroll-proportion="0.0" vertical-offset="825" max-vertical-offset="2085">
+            <state line="130" column="41" selection-start="3160" selection-end="3160" vertical-scroll-proportion="0.0" vertical-offset="1950" max-vertical-offset="2175">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="assembly.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/assembly/assembly.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="47" selection-start="697" selection-end="697" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
               <folding />
             </state>
           </provider>
@@ -113,11 +167,52 @@
         <option value="$PROJECT_DIR$/src/MetaAnalyser.java" />
         <option value="$PROJECT_DIR$/src/InteractionTriplet.java" />
         <option value="$PROJECT_DIR$/src/MetaAnalyser_synch.java" />
+        <option value="$PROJECT_DIR$/src/MetaAnalyserParallelBinary.java" />
+        <option value="$PROJECT_DIR$/src/CompareBinaryToText.java" />
+        <option value="$PROJECT_DIR$/src/main/java/MetaAnalyser.java" />
+        <option value="$PROJECT_DIR$/src/main/assembly/assembly.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/CompareBinaryToText.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/InteractionTriplet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/MetaAnalyser_synch.java" />
       </list>
     </option>
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="MavenProjectNavigator">
-    <treeState />
+    <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="InteractionMetaAnalysis" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="InteractionMetaAnalysis" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
+        </PATH_ELEMENT>
+      </PATH>
+    </treeState>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
@@ -150,16 +245,14 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="InteractionMetaAnalysis" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -186,19 +279,79 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="InteractionMetaAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="InteractionMetaAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="InteractionMetaAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="InteractionMetaAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="InteractionMetaAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="InteractionMetaAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assembly" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="xml.catalog" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -206,17 +359,17 @@
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CheckImputationQualityAroundGene" />
     <property name="recentsLimit" value="5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../InteractionMetaAnalysis_old" />
     <property name="dynamic.classpath" value="false" />
-    <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
   </component>
   <component name="RunManager" selected="Application.MetaAnalyser_synch">
@@ -264,6 +417,28 @@
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
       <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -361,29 +536,38 @@
       <workItem from="1416488807545" duration="11490000" />
       <workItem from="1417597024496" duration="850000" />
       <workItem from="1417621000833" duration="34442000" />
-      <workItem from="1421228050778" duration="4210000" />
+      <workItem from="1421228050778" duration="7897000" />
+      <workItem from="1421758750690" duration="1954000" />
+      <workItem from="1422025996361" duration="617000" />
+      <workItem from="1422261727683" duration="585000" />
+      <workItem from="1422522945313" duration="1194000" />
+      <workItem from="1422536690633" duration="10330000" />
+      <workItem from="1423732873088" duration="29000" />
+      <workItem from="1423733025622" duration="19687000" />
+      <workItem from="1425917465179" duration="597000" />
+      <workItem from="1426066080488" duration="585000" />
+      <workItem from="1426163181066" duration="3301000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73405000" />
+    <option name="totallyTimeSpent" value="115971000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1680" height="971" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38651684" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3858093" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16626795" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16607143" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25416666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32815966" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -391,6 +575,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -413,91 +598,206 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/MetaAnalyser.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="209" column="650" selection-start="6931" selection-end="7542" vertical-scroll-proportion="0.0" vertical-offset="2870" max-vertical-offset="3375">
+        <state line="84" column="30" selection-start="3893" selection-end="3893" vertical-scroll-proportion="0.0" vertical-offset="930" max-vertical-offset="1485">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MetaAnalyser_synch.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/MetaAnalyser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="307" column="10" selection-start="10212" selection-end="10212" vertical-scroll-proportion="0.0" vertical-offset="4605" max-vertical-offset="4680">
+        <state line="32" column="0" selection-start="1083" selection-end="1083" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="3375">
           <folding>
-            <element signature="e#4700#4709#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/InteractionTriplet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="8" selection-start="1264" selection-end="1264" vertical-scroll-proportion="0.0" vertical-offset="825" max-vertical-offset="2085">
+        <state line="38" column="12" selection-start="810" selection-end="810" vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="1140">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MetaAnalyser.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/CompareBinaryToText.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="161" column="116" selection-start="5368" selection-end="5368" vertical-scroll-proportion="0.0" vertical-offset="1005" max-vertical-offset="2805">
+        <state line="41" column="87" selection-start="1713" selection-end="1713" vertical-scroll-proportion="0.0" vertical-offset="388" max-vertical-offset="1485">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/InteractionTriplet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/MetaAnalyser_synch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="8" selection-start="685" selection-end="685" vertical-scroll-proportion="0.0" vertical-offset="525" max-vertical-offset="1500">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MetaAnalyser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="143" column="36" selection-start="4559" selection-end="4559" vertical-scroll-proportion="0.0" vertical-offset="1323" max-vertical-offset="2445">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/InteractionTriplet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="8" selection-start="969" selection-end="969" vertical-scroll-proportion="0.0" vertical-offset="515" max-vertical-offset="1140">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MetaAnalyser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="143" column="36" selection-start="4559" selection-end="4559" vertical-scroll-proportion="0.0" vertical-offset="1323" max-vertical-offset="2445">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/InteractionTriplet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="8" selection-start="969" selection-end="969" vertical-scroll-proportion="0.0" vertical-offset="515" max-vertical-offset="1140">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MetaAnalyser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="209" column="650" selection-start="6931" selection-end="7542" vertical-scroll-proportion="0.0" vertical-offset="2870" max-vertical-offset="3375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/InteractionTriplet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="8" selection-start="1264" selection-end="1264" vertical-scroll-proportion="0.0" vertical-offset="1216" max-vertical-offset="2070">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MetaAnalyser_synch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="17" selection-start="1213" selection-end="1213" vertical-scroll-proportion="0.33333334" vertical-offset="298" max-vertical-offset="4710">
+        <state line="56" column="12" selection-start="1613" selection-end="1613" vertical-scroll-proportion="0.0" vertical-offset="840" max-vertical-offset="4770">
           <folding>
-            <element signature="e#4700#4709#0" expanded="true" />
+            <element signature="e#4667#4676#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/InteractionTriplet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="130" column="41" selection-start="3160" selection-end="3160" vertical-scroll-proportion="0.0" vertical-offset="1950" max-vertical-offset="2175">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/assembly/assembly.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="45" selection-start="1986" selection-end="1986" vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="46" selection-start="1066" selection-end="1089" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="1485">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MetaAnalyser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="0" selection-start="1083" selection-end="1083" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="3375">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="30" selection-start="1450" selection-end="1450" vertical-scroll-proportion="0.0" vertical-offset="945" max-vertical-offset="1095">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CompareBinaryToText.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="14" selection-start="1525" selection-end="1527" vertical-scroll-proportion="0.0" vertical-offset="600" max-vertical-offset="1365">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MetaAnalyser_synch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="267" column="16" selection-start="8813" selection-end="8813" vertical-scroll-proportion="0.0" vertical-offset="4005" max-vertical-offset="4800">
+          <folding>
+            <element signature="e#4667#4676#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/assembly/assembly.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="45" selection-start="1986" selection-end="1986" vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="46" selection-start="1066" selection-end="1089" vertical-scroll-proportion="0.0" vertical-offset="128" max-vertical-offset="1485">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MetaAnalyser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="0" selection-start="1083" selection-end="1083" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="3375">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="30" selection-start="1450" selection-end="1450" vertical-scroll-proportion="0.0" vertical-offset="473" max-vertical-offset="1095">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CompareBinaryToText.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="14" selection-start="1525" selection-end="1527" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="1365">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MetaAnalyser_synch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="267" column="16" selection-start="8813" selection-end="8813" vertical-scroll-proportion="0.0" vertical-offset="4005" max-vertical-offset="4800">
+          <folding>
+            <element signature="e#4667#4676#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/assembly/assembly.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="45" selection-start="1986" selection-end="1986" vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/nl/systemsgenetics/genetica-libraries/1.0.4-SNAPSHOT/genetica-libraries-1.0.4-SNAPSHOT.jar!/umcg/genetica/io/binInteraction/BinaryInteractionFile.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="111" column="76" selection-start="7710" selection-end="7710" vertical-scroll-proportion="0.34816247" vertical-offset="1470" max-vertical-offset="2895" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CompareBinaryToText.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="87" selection-start="1713" selection-end="1713" vertical-scroll-proportion="0.0" vertical-offset="388" max-vertical-offset="1485">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MetaAnalyser_synch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="12" selection-start="1613" selection-end="1613" vertical-scroll-proportion="0.0" vertical-offset="840" max-vertical-offset="4770">
+          <folding>
+            <element signature="e#4667#4676#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/InteractionTriplet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="130" column="41" selection-start="3160" selection-end="3160" vertical-scroll-proportion="0.0" vertical-offset="1672" max-vertical-offset="2175">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="35" selection-start="437" selection-end="437" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1485">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/assembly/assembly.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="47" selection-start="697" selection-end="697" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MetaAnalyser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="207" column="63" selection-start="6842" selection-end="6901" vertical-scroll-proportion="0.0" vertical-offset="2477" max-vertical-offset="3315">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="13" selection-start="1139" selection-end="1467" vertical-scroll-proportion="0.79318446" vertical-offset="255" max-vertical-offset="1110">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -506,20 +806,12 @@
     <states>
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
-          <artifact-editor>
-            <show-content>
-              <type id="artifact" />
-              <type id="javaee-facet-resources" />
-              <type id="library" />
-              <type id="jpa-descriptors" />
-            </show-content>
-          </artifact-editor>
+          <artifact-editor />
           <last-edited>InteractionMetaAnalysis_synch:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -550,7 +842,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.6 (2)</last-edited>
+          <last-edited>1.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

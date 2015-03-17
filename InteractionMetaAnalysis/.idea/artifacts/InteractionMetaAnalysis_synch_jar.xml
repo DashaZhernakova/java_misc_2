@@ -1,9 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" build-on-make="true" name="InteractionMetaAnalysis_synch:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/InteractionMetaAnalysis_synch_jar</output-path>
-    <root id="archive" name="InteractionMetaAnalysis.jar">
-      <element id="module-output" name="InteractionMetaAnalysis" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/../../../genetica-libraries-1.0.3-SNAPSHOT.jar" path-in-jar="/" />
-    </root>
-  </artifact>
-</component>
